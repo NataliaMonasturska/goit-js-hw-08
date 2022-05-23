@@ -5,10 +5,6 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 // Change code below this line
 
-console.log(galleryItems);
-import SimpleLightboxEnd from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-import { galleryItemsEnd } from './gallery-items.js';
 
 
 
