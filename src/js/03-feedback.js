@@ -15,7 +15,7 @@ form.addEventListener('input', Thrrottle(setLocalStorageValue,500) )
 function setLocalStorageValue(e) {
       obj[e.target.name] = e.target.value;
     
-    console.log(e.target.name);
+  
     
    localStorage.setItem("feedback-form-state", JSON.stringify(obj));  
 }
