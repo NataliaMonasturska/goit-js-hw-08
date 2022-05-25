@@ -13,9 +13,14 @@ saveForm();
 form.addEventListener('input', Thrrottle(setLocalStorageValue,500) )
 
 function setLocalStorageValue(e) {
-      obj[e.target.name] = e.target.value;
-    
-  
+    if (e.target.name = "email") {
+       obj.email =  input.value;
+
+    }
+    if (e.target.name = "message") {
+        obj.message =  textarea .value;
+     
+    }
     
    localStorage.setItem("feedback-form-state", JSON.stringify(obj));  
 }
@@ -24,6 +29,9 @@ function setLocalStorageValue(e) {
 form.addEventListener("submit", onFormSubmit)
 
 function onFormSubmit(e) {
+    if (input.value === "" || textarea.value === "") {
+        return alert ("Все поля должны быть заполнены!")
+    }
     e.preventDefault();  
     e.currentTarget.reset();
     console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
