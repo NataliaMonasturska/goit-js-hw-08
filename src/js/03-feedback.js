@@ -29,10 +29,11 @@ function setLocalStorageValue(e) {
 form.addEventListener("submit", onFormSubmit)
 
 function onFormSubmit(e) {
+    e.preventDefault();  
     if (input.value === "" || textarea.value === "") {
         return alert ("Все поля должны быть заполнены!")
     }
-    e.preventDefault();  
+    
     e.currentTarget.reset();
     console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
     localStorage.removeItem("feedback-form-state")
